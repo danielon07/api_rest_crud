@@ -24,7 +24,7 @@ class UserController extends Controller
 
     public function allUsers()
     {
-        //En vez de utilizar el modelo, se devuelve el array $users emulando 
+        //En vez de utilizar el modelo, se devuelve el array $users emulando
         //una llamada a la base de datos, pero en un caso real se haría una llamada
         //al método ::all() del modelo User
 
@@ -40,12 +40,12 @@ class UserController extends Controller
         //En el argumento $request, se almacenan todos los datos enviados por el método post
         // Ej. se pasa por post el parámetro "edad" con valor 21. $request->edad será igual a 21.
 
-        //Una vez obtenidos estos datos de la variable $request, se puede operar con ellos a través del 
-        //modelo. Por ejemplo se podrían pedir datos para un nuevo usuario (nombre, email), 
+        //Una vez obtenidos estos datos de la variable $request, se puede operar con ellos a través del
+        //modelo. Por ejemplo se podrían pedir datos para un nuevo usuario (nombre, email),
         //crear una instancia del modelo y asignarle los valores de la request a las porpiedades pertinentes
         //y guardarlo en la bbdd con el método ->save()
 
-        //Finalmente, se devuelve un json con un código de estado y los datos enviados para confirmar 
+        //Finalmente, se devuelve un json con un código de estado y los datos enviados para confirmar
         // que se ha realizado correctamente una acción
 
         return response()->json([
@@ -57,12 +57,13 @@ class UserController extends Controller
     }
     public function postOtherThing(Request $request)
     {
-        // Crear una función en la que si se pasa el parámetro "premium" a true en el $request, 
-        // devuelva un código de estado "OK" y un mensaje "el usuario es premium". 
+
+        // Crear una función en la que si se pasa el parámetro "premium" a true en el $request,
+        // devuelva un código de estado "OK" y un mensaje "el usuario es premium".
         // En caso de que se le pase premium false, devolver un código de estado "KO" y mensaje "error: usuario no premium"
     }
     public function deleteSomething(Request $request)
     {
-        // igual que la función anterior pero con un método de tipo delete 
+        // igual que la función anterior pero con un método de tipo delete
     }
 }
